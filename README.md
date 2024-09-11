@@ -1,5 +1,6 @@
-# Immortal FN Private Usermode
+# Immortal FN CDN Hosting
 
 📂 Archive (CDN) for Immortal Solutions Paid Usermode
 
-In Charge: MrH0ql
+Owner: MrH0ql
+Management: udkernel
