@@ -1,0 +1,19 @@
+# Overheat: 
+
+```cpp
+        if (settings::exploits::overheat)
+        {
+            MASK
+            float TimeHeatWasLastAdded = read<float>(cache::local_pawn + 0x1c9c);
+            float TimeOverheatedBegan = read<float>(cache::local_pawn + 0x1ca0);
+            float OverheatValue = read<float>(cache::local_pawn + 0x1c94);
+            float WeaponOverheatedAnimation = read<float>(cache::local_pawn + 0x1c88);
+            uintptr_t CurrentWeapon = read<float>(cache::local_pawn + 0xA68);
+
+            if (TimeHeatWasLastAdded != 0.f or TimeOverheatedBegan != 0.f or OverheatValue != 0.f or WeaponOverheatedAnimation != 0.f) {
+                write<float>(CurrentWeapon + 0x14d4, 0.f);
+                write<float>(CurrentWeapon + 0x14d8, 0.f);
+                write<float>(CurrentWeapon + 0x14cc, 0.f);
+                write<float>(CurrentWeapon + 0x14c0, 0.f);
+            }
+        }```
